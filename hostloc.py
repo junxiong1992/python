@@ -14,8 +14,8 @@ from http.cookiejar import LWPCookieJar
 from multiprocessing.dummy import Pool as ThreadPool
 from termcolor import *
 
-username = 'brady_xiong'
-password = 'BRADYpassw0rd'
+username = 'name'
+password = 'pass'
 
 now = str(datetime.utcnow().replace(tzinfo=timezone.utc).astimezone(timezone(timedelta(hours=8)))).split('.')[0]
 cookies = LWPCookieJar(filename='cookies.txt')
