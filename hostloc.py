@@ -1,5 +1,12 @@
 # -*- coding: utf8 -*-
 
+#######  执行
+'''
+   apt-get install python3-pip
+   pip3 install requests termcolor bs4
+'''
+########
+
 import sys, requests, re, random
 from datetime import *
 # from bs4 import BeautifulSoup
@@ -7,8 +14,8 @@ from http.cookiejar import LWPCookieJar
 from multiprocessing.dummy import Pool as ThreadPool
 from termcolor import *
 
-username = 'name'
-password = 'pass'
+username = 'brady_xiong'
+password = 'BRADYpassw0rd'
 
 now = str(datetime.utcnow().replace(tzinfo=timezone.utc).astimezone(timezone(timedelta(hours=8)))).split('.')[0]
 cookies = LWPCookieJar(filename='cookies.txt')
@@ -45,7 +52,7 @@ def login(user, password):
         return session
     else:
         print(colored(now + '登录失败，系统自动退出', 'red'))
-        exit(0)
+        exit()
 
 
 def score(sess):
